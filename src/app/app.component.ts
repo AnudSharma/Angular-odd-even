@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assignment2';
+thisCounter=[];
+
+  getCounter(event:number){
+    console.log("the event"+event)
+this.thisCounter.push(event);
+  }
+
+  isOdd(x){
+    return x & 1;
+  }
 }

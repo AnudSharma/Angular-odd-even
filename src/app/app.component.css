@@ -1,0 +1,25 @@
+p{
+
+}
+.game{
+  margin:auto;
+  max-width:800px;
+border:2px solid darkgray
+}
+.even{
+  color:red;
+  font-weight: 700;
+  padding:10px;
+  margin:auto;
+  max-width:300px;
+
+}
+
+.odd{
+  color:green;
+  padding:10px;
+  margin:auto;
+  max-width:300px;
+  float:left;
+
+}
