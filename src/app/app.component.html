@@ -1,4 +1,6 @@
+<h2 bgColorDirective>Lets play game</h2>
 <div class="game">
+
   <app-game-control (startEvent)="getCounter($event)">
 
   </app-game-control>
@@ -9,6 +11,7 @@
   </section>
 
 <section class="even" >
+
   <app-even *ngFor="let counter of thisCounter" [element]="counter">
     <p *ngIf="!isOdd(counter)">{{counter}}</p>
   </app-even>
