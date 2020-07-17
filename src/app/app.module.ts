@@ -6,7 +6,8 @@ import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import {bgHighlightDirective} from './bg-hightight-directive';
-import { BetterHightlightDirectiveDirective } from './better-hightlight-directive.directive'
+import { BetterHightlightDirectiveDirective } from './better-hightlight-directive.directive';
+import { UnlessDirective } from './unless.directive'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BetterHightlightDirectiveDirective } from './better-hightlight-directiv
     OddComponent,
     EvenComponent,
     bgHighlightDirective,
-    BetterHightlightDirectiveDirective
+    BetterHightlightDirectiveDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule

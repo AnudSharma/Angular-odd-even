@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Assignment2';
 thisCounter=[];
+value=7;
 
   getCounter(event:number){
     console.log("the event"+event)

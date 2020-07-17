@@ -1,14 +1,28 @@
 
 <div class="game">
   <h2 bgColorDirective>Lets play game</h2>
-  <h4 appBetterHightlightDirective>Left Side:Odd Number & Right Side:Even Number</h4>
+  <h4 appBetterHightlightDirective [defaultColor]="'pink'">Left Side:Odd Number & Right Side:Even Number</h4>
   <app-game-control (startEvent)="getCounter($event)">
 
   </app-game-control>
-  <section class="odd">
-    <app-odd  *ngFor="let counter of thisCounter" [element]="counter">
-      <p *ngIf="isOdd(counter)">{{counter}}</p>
-    </app-odd>
+
+  <!-- Use of custom structural directive -->
+  <section class="odd" *appUnless="3==3">
+
+      <app-odd  *ngFor="let counter of thisCounter" [element]="counter">
+        <!-- use of ngSwitch -->
+        <p *ngIf="isOdd(counter)">{{counter}}
+          <span [ngSwitch]="counter">
+            <span *ngSwitchCase="3"> It is Anie birthday</span>
+            <span *ngSwitchCase="7"> It is Jennie birthday</span>
+            <span *ngSwitchCase="11"> It is Romie birthday</span>
+            <span *ngSwitchDefault=""></span>
+            </span>
+         </p>
+
+      </app-odd>
+
+
   </section>
 
 <section class="even" >
@@ -17,6 +31,8 @@
     <p *ngIf="!isOdd(counter)">{{counter}}</p>
   </app-even>
 </section>
+
+
 
 </div>
 
